@@ -1,0 +1,5 @@
+
+Custom Paramters (4/4)
+ConnectInit
+
+begin dbms_session.set_identifier('@VARIABLE('BOUSER')'); end;

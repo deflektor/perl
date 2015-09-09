@@ -1,0 +1,150 @@
+#BI001_Gross Adds, Disconnections, EoP by tariff and day
+#BI002_Gross Adds, Disconnections, EoP by tariff
+#BI003_Gross Adds, Disconnections, EoP by device and day
+#BI004_Gross Adds, Disconnections, EoP by device and tariff
+#BI005_Gross Adds, Disconnections, EoP by device family and sales channel
+#BI006_Gross Adds, Disconnections, EoP by sales channel and day
+#BI007_Gross Adds, Disconnections, EoP by sales channel and tariff
+#BI008_Subscriber disconnection by month of activation
+#BI009_Gross Adds by sales channel, organisation and tariff
+#BI010_Gross Adds by sales channel and device
+#BI011_Gross Adds by sales channel and organisation
+#BI012_Mobile Upgrade by Mobile and Shop
+#BI013_Prepaid to Postpaid Mobile Upgrade
+#BI014_Prepaid to Postpaid by activation date
+#BI015_Add-on per Bill Cycle and Tariff
+#BI020_MNP Gross Adds and Disconnection
+#BI021_Suspensions by type, reason and tariff
+#BI022_Suspension by month of activation
+#BI023_Disconnection by type, reason and tariff
+#BI024_ORS Gross Adds monthly
+#BI025_ORS Gross Adds Weekly
+#BI026_ORS Daily Gross Adds
+#BI027_ORS Active Points of Sale
+#BI028_MRS Gross Adds monthly
+#BI029_MRS Gross Adds weekly
+#BI030_MRS Gross Adds daily
+#BI033_Network Usage and Revenue by Usage Category
+#BI034_Network Usage and Revenue by Tariff, Record Item and Eventtype
+#BI035_Customer Distribution per Tariffplan
+#BI036_Voice NOR Share
+#BI037_VAS SMS Revenue Premium
+#BI038_MMS VAS MT
+#BI040_High Usage Internal Billcycle
+#BI041-Lawful Interception
+#BI042_FMK SMS, MMS and Emergency Calls
+#BI043_Unmasked Call Detail Overview
+#BI044_Masked Call Detail Overview
+#BI045_HWL Non Voice Histogram
+#BI046_Employees EGN for work councils
+#BI047_Prepaid Disconnection no Revenue
+#BI048_Activity per Mobile Type
+#BI049_Revenue per Mobile User
+#BI050_Total Customer EoP by Revenue Indicator
+#BI051_3GEO Clicks
+#BI052_Content Usage Clicks by day
+#BI053_SMS VAS MT
+#BI054_VMS used up voucher by channel and value
+#BI055_VMS Vouchers by status, value and sales channel
+#BI056_Prepaid Disconnection no Usage
+#BI057_Mobile TV per Channel
+#BI058_Mobile TV per Channel per Day
+#BI059_Unbilled Charges per GL Code and Bill Cycle
+#BI060_Aging Report for Customer Receivables
+#BI061_Open payment list detail
+#BI063_Interconnect MSISDN Info
+#BI064_Content Usage Homesbase Clicks only
+#BI065_Network Usage and Revenue by Usage Category FM
+#BI066_Network Usage and Revenue by Tariff, Record Item and Eventtype FM
+#BI067_Unbilled Charges per GL Code and Bill Cycle FM
+#BI068_Network Usage by Duration for Voice National FM
+#BI070_NR Cell ID Traffic
+#BI071_Mobile Upgrades and Gross Adds by Mobile and Shop
+#BI072_Gross Additions and Disconnections by Address
+#BI073_Masked Call Detail Overview Customer
+#BI074_Clicks on Trailer
+#BI075_Invoice of RS Management
+#BI076_SDF Usage Indicator
+#BI077_Migrated Prepaid Initial Top Up Amount
+#BI078_Average Case Duration by Types
+#BI079_Average Case Assignment Duration by Group
+#BI080_Migrated Prepaid Initial Top Ups by Month since Migration
+#BI082_Device Changes by Reasons and Depreciation Period
+#BI083_Postpaid Churn by Initiator and Reason
+#BI083_Postpaid Churn by Initiator and Reason (fast)
+#BI084_Kontoaufstellung
+#BI085_Postpaid Churn of Contract Extensions
+#BI088_X-Series
+#BI089_No Payments in first 3 Months
+#BI090_MGM Check Customer Self Promotion
+#BI091_MGM Check Promotion Cancelled
+#BI092_MGM Promotion Activations
+#BI093_MGM Promotors
+#BI094_High Usage Internal Billcycle by Account
+#BI095_Contract Extensions by Binding Period
+#BI096_Contract Extensions by Details
+#BI097_Open Internet Usage
+#BI098_Device Changes by Details
+#BI099_Deferred Fulfillment Status
+#BI100_Deferred Fulfillment InOut
+#BI101_Incoming Usage
+#BI102_PS vs TAP
+#BI103_Data Development
+#BI104_Tariff Changes by Details
+#BI105_Binding Period Ends
+#BI106_Scheduled Retirement Requests by Details
+#BI107_Monthly Postpaid CRM Numbers
+#BI108 Visitor Roaming - Daily figures
+#BI111_Profiling
+#BI111_Profiling Free Floater vs Churner
+#BI112_SSO_selfservice Orders
+#BI114_Correspondance_Manager_SLA
+#BI114_Correspondance_Manager_SLA_details
+#BI115_Subscriber Data Traffic Split
+#BI116_Masked Reduced Call Detail Overview
+#BI117_Charging Gateway Packed Switched
+#BI118_License Reporting 3DataManager
+#BI119_Region ORS Gross Adds monthly
+#BI121_Content User
+#BI123_Internet_2_go
+#BI124_crossgate_invoice
+#BI124_crossgate_invoice_accounts
+#BI124_crossgate_outage
+#BI124_crossgate_sla
+#BI124_crossgate_sla_detail
+#BI125_Subscriber Data Traffic Top
+#BI126_Provisioned DataCard Users
+#BI127_Profiling Upgrader vs Churner
+#BI128_Profiling Upgradeables vs Churner
+#BI129_Breakdown_Credits
+#BI130_Complaint_and_correction_credit
+#BI131_Complaint_and_correction_credit_Detail
+#BI132_Skype_Reporting
+#BI133_iUSIM_costcenter
+#BI134_iUSIM_details
+#BI135_iUSIM_usage
+#BI136_iUSIM_costs
+#BI138_RTR Questionnaire - Roaming Data - PS
+#BI139_RTR Questionnaire - Roaming Data - SMS
+#BI140_SDF Subscriber Log
+#BI141_3DataManager Cluster
+#BI142_Faxline_Report
+#BI143_National_Roaming_Share
+#BI144_WebTV
+#BI145_Data Charging
+#BI146_Commissions Control
+#BI148_RTR Questionnaire - Roaming Data - Voice
+#BI149_iUSIM Costcenter Costs
+#BI150_Mobile_Change_And_Upgrade
+#BI151_Current Due for Ageing Customer Receivables
+#BI152_PixFlix
+BI167_Payment Reject List
+# Error Cannot Call Method Dataproviders on an undefined #BI153_Current Due for Issued Customer Receivables
+#BI154_Complaints
+#BI155_Own_Roaming_without_3LikeHome_-_Billing_-_Daily_Figures
+#BI156_Own_Roaming_-_3LikeHome_ -_Billing_-_Daily_Figures
+#BI157_Customer Master Data
+#BI159_National Operators new MSISDNs
+#BIMOB002_GA_by_Device
+#BIMOB003_EDW_GA_and_Disconnections_from_yesterday
+#BIMOB004-AvailableCorporateReports

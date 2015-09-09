@@ -1,0 +1,53 @@
+create table admin.boxi_universe 
+(
+ Name Varchar2(255) primary key,
+ Longname Varchar2(255),
+ description Varchar2(2048),
+ connection Varchar2(255),
+ author Varchar2(50),
+ creation_date date,
+ revision Number(38),
+ comments Varchar2(2048),
+ fullname Varchar2(255),
+ update_date date
+)
+
+select * from boxi_universe
+
+select a.*, b.*
+from 
+(
+select substr(name, instr(name, '.')+1) right_of from boxi_tables
+where universe = 'CUSTOMER BASE REPORT' and alias_flag=0 and name<>'DUAL'
+) a
+full outer join (
+select view_name from mirror_view
+) b on (a.right_of=b.view_name)
+order by a.right_of asc, b.view_name asc
+
+create table admin.boxi_tables
+(
+ Universe Varchar2(255),
+ Name Varchar2(255),
+ weight Number(38),
+ alias_flag Varchar2(1),
+ alias_table Varchar2(255),
+ update_date date
+)
+
+create table admin.boxi_objects
+(
+ Universe Varchar2(255),
+ Parent Varchar2(255),
+ Name Varchar2(255),
+ Description Varchar2(2048),
+ Hide_flag Varchar2(1),
+ stmt_select Varchar2(2048),
+ stmt_where Varchar2(2048),
+ stmt_format Varchar2(2048),
+ lov_refresh_flag Varchar2(1),
+ lov_export_flag Varchar2(1),
+ lov_flag Varchar2(1),
+ Update_date Date
+)
+

@@ -1,0 +1,1 @@
+java -jar ..\reports.jar botest administrator BoxiProd secEnterprise "select * from CI_Infoobjects where si_parent_folder=11149 and si_name like 'BI%%' and SI_KIND='fullclient' and SI_INSTANCE_OBJECT = 0 Order by si_name" > new_reports.ini

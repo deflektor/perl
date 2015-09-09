@@ -1,0 +1,112 @@
+
+Sub GetInfo()
+
+    Set DesignerApp = New Designer.Application
+    DesignerApp.Visible = True
+    Call DesignerApp.LogonDialog
+    Set Univ = DesignerApp.Universes.Open
+    DesignerApp.Visible = False
+
+    Set Wksht = ThisWorkbook.Worksheets("Objects")
+    Wksht.Unprotect
+    Range("Objects").ClearContents
+    Call GetObjectInfo(Univ.Classes, 1)
+'    Range("Objects").Resize(Wksht.UsedRange.Rows.Count - 1, 5).Name = "Objects"  - setting the size of the Objects range was moved to the GetObjectInfo() sub (Marek Chladny)
+    Range("Objects").Columns("D:E").Value = Range("Objects").Columns("B:C").Value
+    Range("Objects").Columns("A:C").Locked = True
+    Range("Objects").Columns("D:E").Locked = False
+    Wksht.Protect
+
+' -------- added by Marek Chladny ------
+    Set Wksht = ThisWorkbook.Worksheets("Classes")
+    Wksht.Unprotect
+    Range("Classes").ClearContents
+    Call GetClassInfo(Univ.Classes, 1)
+'    Range("Classes").Resize(Wksht.UsedRange.Rows.Count - 1, 4).Name = "Classes"  - setting the size of the Classes range was moved to the GetClassInfo() sub (Marek Chladny)
+    Range("Classes").Columns("C:D").Value = Range("Classes").Columns("A:B").Value
+    Range("Classes").Columns("A:B").Locked = True
+    Range("Classes").Columns("C:D").Locked = False
+    Wksht.Protect
+' --------------------------------------
+    
+    Set Wksht = Nothing
+    DesignerApp.Quit
+    Set Univ = Nothing
+    Set DesignerApp = Nothing
+
+End Sub
+
+Sub MakeChanges()
+
+    Dim RowNum As Long
+    Dim Cls As Designer.Class
+    Dim Obj As Designer.Object
+    Dim Rng As Excel.Range
+
+    Set DesignerApp = New Designer.Application
+    DesignerApp.Visible = True
+    Call DesignerApp.LogonDialog
+    Set Univ = DesignerApp.Universes.Open
+    
+    Set Wksht = ThisWorkbook.Worksheets("Objects")
+    Set Rng = Wksht.Range("Objects")
+
+    For RowNum = 1 To Rng.Rows.Count
+        Set Cls = Univ.Classes.FindClass(Rng.Cells(RowNum, 1).Value)
+        Set Obj = Cls.Objects(Rng.Cells(RowNum, 2).Value)
+        If Obj.Name <> Rng.Cells(RowNum, 4) Then Obj.Name = Rng.Cells(RowNum, 4)
+        Obj.Description = Rng.Cells(RowNum, 5)
+    Next RowNum
+
+' -------- added by Marek Chladny ------
+    Set Wksht = ThisWorkbook.Worksheets("Classes")
+    Set Rng = Wksht.Range("Classes")
+
+    For RowNum = 1 To Rng.Rows.Count
+        If Rng.Cells(RowNum, 1) <> Rng.Cells(RowNum, 3) Or Rng.Cells(RowNum, 2) <> Rng.Cells(RowNum, 4) Then
+           Set Cls = Univ.Classes.FindClass(Rng.Cells(RowNum, 1).Value)
+           Cls.Name = Rng.Cells(RowNum, 3)
+           Cls.Description = Rng.Cells(RowNum, 4)
+        End If
+    Next RowNum
+' --------------------------------------
+    
+    Set Obj = Nothing
+    Set Cls = Nothing
+    Set Rng = Nothing
+    Set Wksht = Nothing
+    Set Univ = Nothing
+    Set DesignerApp = Nothing
+
+End Sub
+
+Private Sub GetObjectInfo(Clss, RowNum As Long)
+    Dim Cls As Designer.Class
+    Dim Obj As Designer.Object
+    For Each Cls In Clss
+        For Each Obj In Cls.Objects
+            RowNum = RowNum + 1
+            Wksht.Cells(RowNum, 1) = Cls.Name
+            Wksht.Cells(RowNum, 2) = Obj.Name
+            Wksht.Cells(RowNum, 3) = Obj.Description
+        Next Obj
+        If Cls.Classes.Count > 0 Then
+            Call GetObjectInfo(Cls.Classes, RowNum)
+        End If
+        Range("Objects").Resize(RowNum - 1, 5).Name = "Objects" ' added by Marek Chladny
+    Next Cls
+End Sub
+
+Private Sub GetClassInfo(Clss, RowNum As Long) ' added by Marek Chladny
+    Dim Cls As Designer.Class
+    For Each Cls In Clss
+        RowNum = RowNum + 1
+        Wksht.Cells(RowNum, 1) = Cls.Name
+        Wksht.Cells(RowNum, 2) = Cls.Description
+        If Cls.Classes.Count > 0 Then
+            Call GetClassInfo(Cls.Classes, RowNum)
+        End If
+        Range("Classes").Resize(RowNum - 1, 4).Name = "Classes"
+    Next Cls
+End Sub
+

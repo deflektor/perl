@@ -1,0 +1,170 @@
+<html>
+<body>
+<table>
+<tr><td colspan=2><h1>UNIVERSE - ASPECT REPORT</h1></td></tr><br>
+<tr><td colspan=2><h2>Class - C Flag IDs</h2></td></tr><br>
+<tr><td>Cflag Id</td><td></td></tr>
+<tr><td>Cflag Description</td><td>Modifier of the call</td></tr>
+<tr><td>Cflag1 Id</td><td></td></tr>
+<tr><td>Cflag1 Description</td><td>This value is related to the disconnect reason sent over the Contact Server Link</td></tr>
+<tr><td colspan=2><h2>Class - CallData B Extension</h2></td></tr><br>
+<tr><td>Art</td><td>type of call (Prospect, Beschwerde, Service)</td></tr>
+<tr><td>Second Category</td><td>Individual category</td></tr>
+<tr><td>Geraetename</td><td>Device name if available</td></tr>
+<tr><td colspan=2><h2>Class - CallData A - F</h2></td></tr><br>
+<tr><td>Calldata B</td><td>Wrap-Up data. Data entered by means of scripts of CCT steps; otherwise, local Call Center mailbox number corresponding to the last attempted AMIS-A message delivery on an AMIS-A call</td></tr>
+<tr><td>Calldata D</td><td>Wrap-Up data. Data entered by means of scripts of CCT steps; otherwise, number of AMIS-A message delivery attempts (up to 9) within an AMS-A call</td></tr>
+<tr><td colspan=2><h2>Class - Problems</h2></td></tr><br>
+<tr><td>Echo Problems</td><td>Echo Problem? (Y/N)</td></tr>
+<tr><td colspan=2><h2>Class - Miscellaneous 1 - 4</h2></td></tr><br>
+<tr><td>Misc 3</td><td>Advice of Charge. Total currency amount or total charging units is the product of the value of this field and the embedded multiplier in the misc4 field (This filed applies to Euro-ISDN and QSIG calls only)</td></tr>
+<tr><td>Misc 2</td><td>Answer detection result for a predictive outbound integration call</td></tr>
+<tr><td>Misc 1</td><td>RIQ duration. If cflag2 = q, contains the duration of the IVR portion of the call</td></tr>
+<tr><td colspan=2><h2>Class - DNIS</h2></td></tr><br>
+<tr><td>Announcement Id</td><td>Call Type Announcement Number. This is the associated announcement number from the Announcements table</td></tr>
+<tr><td>Trunk Group ID</td><td>Trunk Group Number</td></tr>
+<tr><td>Sub Application</td><td>Subapplication name</td></tr>
+<tr><td>Dialed</td><td>Dialed Number</td></tr>
+<tr><td>DNIS ID</td><td>DDI/DNIS digits. Digits collected on incoming call</td></tr>
+<tr><td colspan=2><h2>Class - Origination User Information</h2></td></tr><br>
+<tr><td>User Status</td><td>Status of the user</td></tr>
+<tr><td>User Type Description</td><td></td></tr>
+<tr><td>Last Name</td><td></td></tr>
+<tr><td>First Name</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Call Attributes</h2></td></tr><br>
+<tr><td>Track Identification Number</td><td>ID number associated with track</td></tr>
+<tr><td>Number Of Dial DTMF DDDR</td><td>Number of Dial DTMF Digit Request (DDDR) messages successfully processed. DDDR is a Contact Server Link message that allows a CTI application to dial DTMF digits. DDDR works only on incoming calls connected to a TeleSat</td></tr>
+<tr><td>Rejected Interflow - Local</td><td>Number of interflow calls rejected by local Call  Center after receiving an ACCEPT response from remote Call Centers</td></tr>
+<tr><td>Rejected Interflow - Remote</td><td>Number of remote Call Centers that rejected this interflow call</td></tr>
+<tr><td>Network Errors</td><td>Number of network errors encountered from local and remote Call Centers for this interflow call</td></tr>
+<tr><td>Accepted Interflow</td><td>Number of remote Call Centers that accepted this interflow call</td></tr>
+<tr><td>IP NIQ Routing Flag</td><td>Flag defining whether the call has been handled by the IP Network InterQueue feature 0 = No IP NIQ, N = IP NIQ via node, R = IP NIQ via route</td></tr>
+<tr><td>Handled In Service Level</td><td>Y/N = incoming call. Blank = Calls other than incoming (abandoned, inside, outgoing)</td></tr>
+<tr><td>Track Node Identification Number</td><td>ID number associated with track node</td></tr>
+<tr><td>To Node Identification Number</td><td>ID number associated with destination node</td></tr>
+<tr><td>From Node Identification Number</td><td>ID number associated with originating node</td></tr>
+<tr><td>Dialed Digits</td><td>On outgoing call, the dialed digits, CLI information from the network, and the prefix from the global flags; on incoming call, the ANI digits received</td></tr>
+<tr><td colspan=2><h2>Class - Problems</h2></td></tr><br>
+<tr><td>Noise Problems</td><td>Noise problem? (Y/N)</td></tr>
+<tr><td colspan=2><h2>Class - Activity User Information</h2></td></tr><br>
+<tr><td>Activity Team Description</td><td></td></tr>
+<tr><td>Activity User Status Date</td><td></td></tr>
+<tr><td>Activity User Status</td><td></td></tr>
+<tr><td>Activity User Type Description</td><td></td></tr>
+<tr><td>Activity Last Name</td><td></td></tr>
+<tr><td>Activity Agent</td><td>Constist of Firstname and Lastname</td></tr>
+<tr><td>Activity First Name</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Destination</h2></td></tr><br>
+<tr><td>Destination Type Id</td><td></td></tr>
+<tr><td>Destination Type Description</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Activity Date Class</h2></td></tr><br>
+<tr><td>Year</td><td></td></tr>
+<tr><td>Fiscal Month</td><td></td></tr>
+<tr><td>Month Name</td><td></td></tr>
+<tr><td>Calendar Quarter</td><td></td></tr>
+<tr><td>Calendar Month</td><td></td></tr>
+<tr><td>Calendar Week</td><td></td></tr>
+<tr><td>Weekday</td><td></td></tr>
+<tr><td>Day Of Month</td><td></td></tr>
+<tr><td>Date To</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Call Termination Date Class</h2></td></tr><br>
+<tr><td>Fiscal Quarter</td><td></td></tr>
+<tr><td>Year</td><td></td></tr>
+<tr><td>Fiscal Month</td><td></td></tr>
+<tr><td>Month Name</td><td></td></tr>
+<tr><td>Calendar Quarter</td><td></td></tr>
+<tr><td>Calendar Month</td><td></td></tr>
+<tr><td>Calendar Week</td><td></td></tr>
+<tr><td>Weekday</td><td></td></tr>
+<tr><td>Day Of Month</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Call Details</h2></td></tr><br>
+<tr><td>Disposition Description Large</td><td></td></tr>
+<tr><td>Disposition Id</td><td></td></tr>
+<tr><td>Disposition Description Small</td><td></td></tr>
+<tr><td>Associated Third Party Type ID</td><td>Type of third party</td></tr>
+<tr><td>Associated Third Party</td><td>Associated Third Party</td></tr>
+<tr><td>Application Description</td><td></td></tr>
+<tr><td>Application Id</td><td></td></tr>
+<tr><td>Call Termination Time</td><td>Time call terminated (Date + Time)</td></tr>
+<tr><td>Call Termination Date</td><td>Date call terminated</td></tr>
+<tr><td colspan=2><h2>Class - Measures</h2></td></tr><br>
+<tr><td>Duration Activity Time In Sec</td><td>Durationn between Min and Max</td></tr>
+<tr><td>Min Activity Time</td><td></td></tr>
+<tr><td>Destination Agent Activity Duration</td><td></td></tr>
+<tr><td>Wrapup Time In Sec</td><td>Time in seconds spent in wrap-up</td></tr>
+<tr><td>Talk Time In Sec</td><td>Duration in seconds from the time the caller connects to a Call Center resource (agent, auxiliary device, trunk, admin user, voice port) or information announcement caller may hear prior to connecting to the Call Center resource. This does not include hold time</td></tr>
+<tr><td>Select Time In Sec</td><td>Total time in seconds agent is reserved, waiting for network call to be connected</td></tr>
+<tr><td>Ring Time In Sec</td><td>For an incoming call this is the duration in seconds of ringing before the Call Center answers with an announcement or an agent. This includes, for example, time to evaluate DNIS/DDI digits and time to connect to a CCT. 
+For an outgoing call this is the duration in seconds from time outside or inside line key is pressed until ENTER or RELEASE key is pressed.</td></tr>
+<tr><td>Queue Time In Sec</td><td>For an incoming call this is the duration in seconds from SELECT step to terminating CCT step, such as CONNECT. This includes any ringing caller hears after connection
+to a CCT</td></tr>
+<tr><td>Network Time In Sec</td><td>Total time in seconds before Network InterQueue request CCT step on originating Call Center</td></tr>
+<tr><td>Hold Time In Sec</td><td>Duration in seconds a caller spends on hold after an agent manually places the caller on hold</td></tr>
+<tr><td>Dial Time In Sec</td><td>For future use</td></tr>
+<tr><td>Delay Time In Sec</td><td>Duration in seconds a caller spends listening to noninformation announcements</td></tr>
+<tr><td>Call Type Time In Sec</td><td>Duration in seconds agent listens to call-type announcement</td></tr>
+<tr><td>Total Count Of Calls</td><td>Total count of calls in table call-details.</td></tr>
+<tr><td colspan=2><h2>Class - Call Details</h2></td></tr><br>
+<tr><td>Transaction Type Description Small</td><td></td></tr>
+<tr><td>Transaction Type Id</td><td></td></tr>
+<tr><td>Call Type Descripton Large</td><td>Call Type Descripton Large</td></tr>
+<tr><td>Call Type Description Small</td><td>Call Type Description Small</td></tr>
+<tr><td>Call Type Id</td><td></td></tr>
+<tr><td>Call ID</td><td>ID Number associated with call</td></tr>
+<tr><td colspan=2><h2>Class - Call Termination Date Class</h2></td></tr><br>
+<tr><td>Diff Months</td><td></td></tr>
+<tr><td>Diff Years</td><td></td></tr>
+<tr><td>Diff Days</td><td></td></tr>
+<tr><td>Fiscal Year</td><td></td></tr>
+<tr><td>Date To</td><td></td></tr>
+<tr><td>Date From</td><td></td></tr>
+<tr><td>Date Hierarchy Id</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Activity Date Class</h2></td></tr><br>
+<tr><td>Diff Months</td><td></td></tr>
+<tr><td>Diff Years</td><td></td></tr>
+<tr><td>Diff Days</td><td></td></tr>
+<tr><td>Fiscal Year</td><td></td></tr>
+<tr><td>Fiscal Quarter</td><td></td></tr>
+<tr><td>Date From</td><td></td></tr>
+<tr><td>Date Hierarchy Id</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Agent Activity Information</h2></td></tr><br>
+<tr><td>Activity Reason Description Small</td><td></td></tr>
+<tr><td>Activity Event Type Description</td><td></td></tr>
+<tr><td>Activity Time</td><td>Activity time  (Date + Time)</td></tr>
+<tr><td>Activity Date</td><td></td></tr>
+<tr><td>Activity User ID</td><td>User-ID of Agent Activity (Fact-Table)</td></tr>
+<tr><td colspan=2><h2>Class - Activity User Information</h2></td></tr><br>
+<tr><td>Activity Agent Group Description</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Destination</h2></td></tr><br>
+<tr><td>Destination User ID</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Destination User Information</h2></td></tr><br>
+<tr><td>Agent Group Description</td><td></td></tr>
+<tr><td>Team Description</td><td></td></tr>
+<tr><td>User Status Date</td><td></td></tr>
+<tr><td>User Status</td><td>Status of the user</td></tr>
+<tr><td>User Type Description</td><td></td></tr>
+<tr><td>Last Name</td><td></td></tr>
+<tr><td>Agent</td><td>Concate of Firstname and Lastname</td></tr>
+<tr><td>First Name</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Origination</h2></td></tr><br>
+<tr><td>Origination Type Id</td><td></td></tr>
+<tr><td>Origination Type Description</td><td></td></tr>
+<tr><td>Origination Time</td><td>Time call originated</td></tr>
+<tr><td>Origination User ID</td><td></td></tr>
+<tr><td colspan=2><h2>Class - Origination User Information</h2></td></tr><br>
+<tr><td>Agent Group Description</td><td></td></tr>
+<tr><td>Team Description</td><td></td></tr>
+<tr><td>User Status Date</td><td></td></tr>
+<tr><td colspan=2><h2>Class - CallData A - F</h2></td></tr><br>
+<tr><td>Calldata C</td><td>Wrap-Up data. Data enterd by means of scripts or CCT steps; otherwise, number of AMIS-A message delivery attempts (up to 9) within an AMIS-A call</td></tr>
+<tr><td>Calldata A</td><td>Wrap-Up data. Data entered by means of scripts or CCT steps; otherwise, remote site mailbox number corresponding to the last attempted AMIS-A message delivery (up to 9) on AMIS-A call</td></tr>
+<tr><td colspan=2><h2>Class - CallData B Extension</h2></td></tr><br>
+<tr><td>Third Category</td><td>Individual category</td></tr>
+<tr><td>First Category</td><td>Individual category</td></tr>
+<tr><td>Verkauf</td><td>Definition if a sale was successuful or did not take place</td></tr>
+<tr><td>Type</td><td>Type of the call (Händler, Inbound and Data)</td></tr>
+<tr><td colspan=2><h2>Class - C Flag IDs</h2></td></tr><br>
+<tr><td>Cflag2 Id</td><td></td></tr>
+</table>
+</body>
+</html>

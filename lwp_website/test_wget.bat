@@ -1,0 +1,1 @@
+wget --header 'Content-Type: application/soap+xml; charset="utf-8"' --http-user='AT-WORK\kilicha' --http-password="xxxxxxxx"  https://at.three.com/sites/1140/BI/ListData.svc/Projects

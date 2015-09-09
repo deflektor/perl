@@ -1,0 +1,1 @@
+SELECT SI_Name FROM ci_infoobjects WHERE SI_KIND='fullclient'  and SI_INSTANCE=0  and si_parent_folder=3045 ORDER BY SI_NAME 
